@@ -1,0 +1,17 @@
+      <p (click)="googleLogin()">Google</p>
+      <p (click)="githubLogin()">GitHub</p>
+      <p (click)="twitterLogin()">Twitter</p>
+      <p (click)="fblogin()">Facebook</p>
+      <p (click)="anonymousLogin()">Anonymous</p>
+      <p (click)="logout()">logout</p>
+<style>
+    .swag{
+        background-color: red
+    }
+</style>
+      <input type="file" multiple (change)="checkFiles($event)">
+      <div *ngFor="let file of files; let i = index">
+          <span>{{file.name}}</span> | <span (click)="choosePath(i)">Choose path</span>
+      </div>
+      <p (click)="upload()">here</p>
+      <p>{{percent | async}}</p>
